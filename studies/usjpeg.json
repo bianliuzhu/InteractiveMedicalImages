@@ -1,0 +1,33 @@
+{
+    "patientName": "US JPEG",
+    "patientId": "123454321",
+    "studyDate": "20120418",
+    "modality": "US",
+    "studyDescription": "US FETAL SURVEY",
+    "numImages": 22,
+    "studyId": "usjpeg",
+    "seriesList": [{
+            "seriesDescription": "Image #1",
+            "seriesNumber": "1",
+            "instanceList": [{
+                "imageId": "GEOB/1.5191KB.DCM"
+            }]
+        },
+        {
+            "seriesDescription": "Image #2",
+            "seriesNumber": "2",
+            "instanceList": [{
+                "imageId": "GEOB/2.516KB.DCM"
+            }]
+        },
+        {
+            "seriesDescription": "Image #3 (clip)",
+            "seriesNumber": "3",
+            "numberOfFrames": 96,
+            "frameRate": 31,
+            "instanceList": [{
+                "imageId": "GEOB/3.79KB.DCM"
+            }]
+        }
+    ]
+}

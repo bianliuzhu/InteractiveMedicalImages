@@ -1,0 +1,24 @@
+{
+    "patientName": "MISTER^CR",
+    "patientId": "9227465",
+    "studyDate": "20010109",
+    "modality": "CR",
+    "studyDescription": "pelvis",
+    "numImages": 2,
+    "studyId": "crstudy",
+    "seriesList": [{
+            "seriesDescription": "Pelvis PA",
+            "seriesNumber": "1",
+            "instanceList": [{
+                "imageId": "1.5191KB.DCM"
+            }]
+        },
+        {
+            "seriesDescription": "PELVIS LAT",
+            "seriesNumber": "1",
+            "instanceList": [{
+                "imageId": "2.516KB.DCM"
+            }]
+        }
+    ]
+}

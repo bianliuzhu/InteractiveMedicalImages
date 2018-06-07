@@ -1,0 +1,31 @@
+{
+    "patientName": "US Echo",
+    "patientId": "",
+    "studyDate": "20120418",
+    "modality": "US",
+    "studyDescription": "US Dopler",
+    "numImages": 22,
+    "studyId": "usdopplerstudy",
+    "seriesList": [{
+            "seriesDescription": "Image #1",
+            "seriesNumber": "1",
+            "instanceList": [{
+                "imageId": "USDoppler/1.5191KB.DCM"
+            }]
+        },
+        {
+            "seriesDescription": "Image #2",
+            "seriesNumber": "2",
+            "instanceList": [{
+                "imageId": "USDoppler/2.516KB.DCM"
+            }]
+        },
+        {
+            "seriesDescription": "Image #3",
+            "seriesNumber": "3",
+            "instanceList": [{
+                "imageId": "USDoppler/3.79KB.DCM"
+            }]
+        }
+    ]
+}

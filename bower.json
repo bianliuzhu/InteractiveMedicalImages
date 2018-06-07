@@ -1,0 +1,45 @@
+{
+  "name": "cornerstoneDemo",
+  "version": "0.1.0",
+  "description": "Cornerstone Demo Application",
+  "main": "",
+  "ignore": [
+    "examples",
+    "src",
+    "test",
+    "gruntfile.js",
+    "package.json",
+    "README.md",
+    ".gitignore"
+  ],
+  "dependencies": {
+    "cornerstone": "~0.8.1",
+    "cornerstoneTools": "~0.7.2",
+    "cornerstoneWADOImageLoader": "~0.7.0",
+    "cornerstoneWebImageLoader": "~0.5.2",
+    "cornerstoneMath": "~0.1.2",
+    "image-jpeg2000": "~0.3.1",
+    "bootstrap": "~3.3.4",
+    "hammerjs": "~2.0.4",
+    "jquery" : "~2.1.1"
+  },
+  "devDependencies": {
+    "qunit": "~1.14.0"
+  },
+  "license": "MIT",
+  "authors": [
+    "Chris Hafey"
+  ],
+  "homepage": "https://github.com/chafey/cornerstoneDemo",
+  "keywords": [
+    "DICOM",
+    "medical",
+    "imaging",
+    "WADO",
+    "cornerstone"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chafey/cornerstoneDemo.git"
+  }
+}

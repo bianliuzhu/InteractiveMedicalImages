@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+    <!-- 支持移动触摸设备 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- CSS -->
+
+    <!-- 字体很棒的CSS工具图标。 -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="lib/bootstrap.min.css" rel="stylesheet">
+
+    <!-- UI CSS -->
+    <link href="lib/jquery-ui.min.css" rel="stylesheet">
+
+    <!-- Cornerstone Base CSS -->
+    <link href="lib/cornerstone.min.css" rel="stylesheet">
+
+    <!-- Cornerstone Demo CSS -->
+    <link href="css/cornerstoneDemo.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="wrap">
+      <!-- Nav bar -->
+      <nav class="myNav navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Interactive Medical Images</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a id="help" href="#" class="button hidden-xs">帮助</a>
+            </li>
+            <li>
+              <a id="about" href="#" class="button hidden-xs">关于</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class='main'>
+        <!-- 标签栏 -->
+        <ul id="tabs" class="nav nav-tabs">
+          <li class="active">
+            <a href="#studyList" data-toggle="tab">Study 列表</a>
+          </li>
+        </ul>
+
+        <!-- 标签内容-->
+        <div id="tabContent" class="tab-content">
+          <!-- Study 列表 -->
+          <div id="studyList" class="tab-pane active">
+            <div class="row">
+              <table class="col-md-12 table table-striped">
+                <thead>
+                  <tr>
+                    <th>患者姓名</th>
+                    <th>患者id</th>
+                    <th>Study 日期</th>
+                    <th>状态</th>
+                    <th>Study 描述</th>
+                    <th># 图像</th>
+                  </tr>
+                </thead>
+                <tbody id="studyListData">
+                  <!-- 从 JSON studyList 清单中填充表行 -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- 研究查看器标签内容模板 -->
+      </div>
+    </div>
+    <!-- Javascripts -->
+
+    <!-- 引入JQuery -->
+    <script src="lib/jquery.min.js"></script>
+
+    <!-- 引入 JQuery UI用于拖放 -->
+    <script src="lib/jquery-ui.min.js"></script>
+
+    <!--引入 JQuery移动触摸Hammerjs适配器-->
+    <script src="lib/hammer.min.js"></script>
+
+    <!-- 引入 bootstrap -->
+    <script src="lib/bootstrap.min.js"></script>
+
+    <!-- 引入 基础库 -->
+    <script src="lib/cornerstone.js"></script>
+
+    <!-- 引入 基础库  -->
+    <script src="lib/cornerstoneMath.js"></script>
+
+    <!-- 包括基石工具库 -->
+    <script src="lib/cornerstoneTools.js"></script>
+
+    <!-- 引入 cornerstoneWADOImageLoader 库 -->
+    <script src="lib/cornerstoneWADOImageLoader.js"></script>
+
+    <!-- 引入 cornerstoneWebImageLoader 库 -->
+    <script src="lib/cornerstoneWebImageLoader.js"></script>
+
+    <!-- 引入 dicom解析器  -->
+    <script src="lib/dicomParser.js"></script>
+
+    <!-- 引入 cornerstone Demo -->
+    <!-- 设置视口 -->
+    <script src="js/setupViewport.js"></script>
+    <!-- 显示缩略图 -->
+    <script src="js/displayThumbnail.js"></script>
+    <!-- 加载 study -->
+    <script src="js/loadStudy.js"></script>
+    <!-- 设置按钮 -->
+    <script src="js/setupButtons.js"></script>
+    <!-- 禁用所有工具 -->
+    <script src="js/disableAllTools.js"></script>
+    <!-- 每个窗口 -->
+    <script src="js/forEachViewport.js"></script>
+    <!-- 图片浏览器 -->
+    <script src="js/imageViewer.js"></script>
+    <!-- 加载 模板 -->
+    <script src="js/loadTemplate.js"></script>
+    <!-- 帮助文件 -->
+    <script src="js/help.js"></script>
+    <!-- 关于我们 -->
+    <script src="js/about.js"></script>
+    <!-- 设置窗口覆盖 -->
+    <script src="js/setupViewportOverlays.js"></script>
+    <!-- 加载 cornerstoneDemo 文件 -->
+    <!-- <script src="js/cornerstoneDemo.js"></script> 将此文件移入index.html中 -->
+    <script>
+      // 负载在HTML模板
+
+      var viewportTemplate; // 视图模板
+      loadTemplate("templates/viewport.html", function (element) {
+        console.log(element);
+        viewportTemplate = element;
+      });
+
+      var studyViewerTemplate; // the study 视图模板
+      loadTemplate("templates/studyViewer.html", function (element) {
+        studyViewerTemplate = element;
+      });
+
+      // 从JSON清单中获取study列表
+      $.getJSON('studyList.json', function (data) {
+        data.studyList.forEach(function (study) {
+
+          // 为清单中的每个 study 研究创建一个表行
+          var studyRow = '<tr><td>' +
+            study.patientName + '</td><td>' +
+            study.patientId + '</td><td>' +
+            study.studyDate + '</td><td>' +
+            study.modality + '</td><td>' +
+            study.studyDescription + '</td><td>' +
+            study.numImages + '</td><td>' +
+            '</tr>';
+
+          // 将这一行附加到学习列表中
+          var studyRowElement = $(studyRow).appendTo('#studyListData');
+
+          // 在学习列表中点击。
+          $(studyRowElement).click(function () {
+
+            //为studay添加新的标签并切换到它
+            var studyTab = '<li><a href="#x' + study.patientId + '" data-toggle="tab">' + study.patientName +
+              '</a></li>';
+            $('#tabs').append(studyTab);
+
+            //通过复制studyViewerTemplate元素添加选项卡内容
+            var studyViewerCopy = studyViewerTemplate.clone();
+
+            /*var viewportCopy = viewportTemplate.clone();
+            studyViewerCopy.find('.imageViewer').append(viewportCopy);*/
+
+
+            studyViewerCopy.attr("id", 'x' + study.patientId);
+            // 构建 可见视图
+            studyViewerCopy.removeClass('hidden');
+            // 向选项卡内容添加部分
+            studyViewerCopy.appendTo('#tabContent');
+
+            // 显示新的选项卡(这将是刚刚添加的最后一个选项卡
+            $('#tabs a:last').tab('show');
+
+            // 切换窗口大小(?)
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+              $(window).trigger('resize');
+            });
+
+            //现在加载study.json
+            loadStudy(studyViewerCopy, viewportTemplate, study.studyId + ".json");
+          });
+        });
+      });
+
+
+      // 显示选项卡上单击
+      $('#tabs a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+      });
+
+      // 主要调整
+      function resizeMain() {
+        var height = $(window).height();
+        $('#main').height(height - 50);
+        $('#tabContent').height(height - 50 - 42);
+      }
+
+
+      // 调用窗口调整大小
+      $(window).resize(function () {
+        resizeMain();
+      });
+      resizeMain();
+
+
+      // 防止滚动iOS
+      document.body.addEventListener('touchmove', function (e) {
+        e.preventDefault();
+      });
+    </script>
+  </body>
+
+</html>

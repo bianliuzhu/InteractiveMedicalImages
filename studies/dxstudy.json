@@ -1,0 +1,24 @@
+{
+    "patientName": "MISTER^CR",
+    "patientId": "9227465",
+    "studyDate": "20010109",
+    "modality": "DX",
+    "studyDescription": "CHEST",
+    "numImages": 2,
+    "studyId": "dxstudy",
+    "seriesList": [{
+            "seriesDescription": "PA",
+            "seriesNumber": "28858",
+            "instanceList": [{
+                "imageId": "DXStudy/3.79KB.DCM"
+            }]
+        },
+        {
+            "seriesDescription": "LAT",
+            "seriesNumber": "28860",
+            "instanceList": [{
+                "imageId": "DXStudy/2.516KB.DCM"
+            }]
+        }
+    ]
+}

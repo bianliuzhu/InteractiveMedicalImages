@@ -1,0 +1,65 @@
+{
+    "patientName": "Patient^Anonymous",
+    "patientId": "12345678",
+    "studyDate": "20100510",
+    "modality": "PTCT",
+    "studyDescription": "Neck^HeadNeckPETCT",
+    "numImages": 261,
+    "studyId": "ptctstudy",
+    "seriesList": [{
+            "seriesUid": "1.3.6.1.4.1.25403.52237031786.3872.20100510032220.2",
+            "seriesDescription": "CT HeadNeck 5.0 H30s",
+            "seriesNumber": "2",
+            "instanceList": [{
+                    "imageId": "PTCTStudy/1.5191KB.DCM"
+                },
+                {
+                    "imageId": "PTCTStudy/2.516KB.DCM"
+                },
+                {
+                    "imageId": "PTCTStudy/3.79KB.DCM"
+                },
+                {
+                    "imageId": "PTCTStudy/test.dcm"
+                }
+            ]
+        },
+        {
+            "seriesUid": "1.3.6.1.4.1.25403.52237031786.3872.20100510032225.14",
+            "seriesDescription": "PET WB-uncorrected",
+            "seriesNumber": "605",
+            "instanceList": [{
+                    "imageId": "PTCTStudy/1.5191KB.DCM"
+                },
+                {
+                    "imageId": "PTCTStudy/2.516KB.DCM"
+                },
+                {
+                    "imageId": "PTCTStudy/3.79KB.DCM"
+                },
+                {
+                    "imageId": "PTCTStudy/test.dcm"
+                }
+            ]
+        },
+        {
+
+            "seriesUid": "1.3.6.1.4.1.25403.52237031786.3872.20100510032227.20",
+            "seriesDescription": "PET WB",
+            "seriesNumber": "606",
+            "instanceList": [{
+                    "imageId": "PTCTStudy/1.5191KB.DCM"
+                },
+                {
+                    "imageId": "PTCTStudy/2.516KB.DCM"
+                },
+                {
+                    "imageId": "PTCTStudy/3.79KB.DCM"
+                },
+                {
+                    "imageId": "PTCTStudy/test.dcm"
+                }
+            ]
+        }
+    ]
+}

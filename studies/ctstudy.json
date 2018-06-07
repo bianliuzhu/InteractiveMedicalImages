@@ -1,0 +1,52 @@
+{
+    "patientName": "MISTER^CT",
+    "patientId": "2178309",
+    "studyDate": "20010105",
+    "modality": "CT",
+    "studyDescription": "CHEST",
+    "numImages": 111,
+    "studyId": "ctstudy",
+    "seriesList": [{
+            "seriesUid": "1.5191",
+            "seriesDescription": "HELICAL CHEST",
+            "seriesNumber": "2",
+            "instanceList": [{
+                    "imageId": "CTStudy/1.5191KB.DCM"
+                },
+                {
+                    "imageId": "CTStudy/2.516KB.DCM"
+                },
+                {
+                    "imageId": "CTStudy/3.79KB.DCM"
+                },
+                {
+                    "imageId": "CTStudy/test.dcm"
+                }
+            ]
+        },
+        {
+            "seriesUid": "2.516",
+            "seriesDescription": "SCOUT PA",
+            "seriesNumber": "1",
+            "instanceList": [{
+                "imageId": "CTStudy/2.516KB.DCM"
+            }]
+        },
+        {
+            "seriesUid": "3.79",
+            "seriesDescription": "SCOUT LAT",
+            "seriesNumber": "1.1",
+            "instanceList": [{
+                "imageId": "CTStudy/3.79KB.DCM"
+            }]
+        },
+        {
+            "seriesUid": "5",
+            "seriesDescription": "PATHOLOGY",
+            "seriesNumber": "5",
+            "instanceList": [{
+                "imageId": "http://127.0.0.1/testDICOM/JPG/1.jpg"
+            }]
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "patientName": "MISTER^MR",
+    "patientId": "832040",
+    "studyDate": "20010108",
+    "modality": "MR",
+    "studyDescription": "BRAIN SELLA",
+    "numImages": 17,
+    "studyId": "mrstudy",
+    "seriesList": [{
+            "seriesDescription": "3-PLANE LOC",
+            "seriesNumber": "1",
+            "instanceList": [{
+                    "imageId": "MRStudy/MR000000.dcm"
+                },
+                {
+                    "imageId": "MRStudy/MR000001.dcm"
+                },
+                {
+                    "imageId": "MRStudy/MR000002.dcm"
+                },
+                {
+                    "imageId": "MRStudy/MR000003.dcm"
+                },
+                {
+                    "imageId": "MRStudy/MR000003.dcm"
+                },
+                {
+                    "imageId": "MRStudy/MR000004.dcm"
+                },
+                {
+                    "imageId": "MRStudy/MR000005.dcm"
+                },
+                {
+                    "imageId": "MRStudy/MR000006.dcm"
+                },
+                {
+                    "imageId": "MRStudy/MR000007.dcm"
+                },
+                {
+                    "imageId": "MRStudy/MR000008.dcm"
+                }
+            ]
+        },
+        {
+            "seriesDescription": "SAG T-1",
+            "seriesNumber": "2",
+            "instanceList": [{
+                    "imageId": "MRStudy/MR000009.dcm"
+                },
+                {
+                    "imageId": "MRStudy/MR000010.dcm"
+                },
+                {
+                    "imageId": "MRStudy/MR000011.dcm"
+                },
+                {
+                    "imageId": "MRStudy/MR000012.dcm"
+                }
+            ]
+        }
+    ]
+}

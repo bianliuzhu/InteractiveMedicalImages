@@ -1,0 +1,73 @@
+{
+    "patientName": "MS^MG",
+    "patientId": "1346269",
+    "studyDate": "20010109",
+    "modality": "MG",
+    "studyDescription": "MAMMOGRAM",
+    "numImages": 8,
+    "studyId": "mgstudy",
+    "seriesList": [{
+            "seriesDescription": "MAMMOGRAM",
+            "seriesNumber": "700",
+            "instanceList": [{
+                "imageId": "MGStudy/1.5191KB.DCM"
+            }]
+        },
+        {
+            "seriesDescription": "MAMMOGRAM",
+            "seriesNumber": "700",
+            "instanceList": [{
+                "imageId": "MGStudy/2.516KB.DCM"
+            }]
+        },
+        {
+            "seriesDescription": "MAMMOGRAM",
+            "seriesNumber": "700",
+            "instanceList": [{
+                "imageId": "MGStudy/3.79KB.DCM"
+            }]
+        },
+        {
+            "seriesDescription": "MAMMOGRAM",
+            "seriesNumber": "700",
+            "instanceList": [{
+                "imageId": "MGStudy/3.79KB.DCM"
+            }]
+        },
+        {
+            "seriesDescription": "BILATERAL",
+            "seriesNumber": "699",
+            "instanceList": [{
+                "imageId": "MGStudy/3.79KB.DCM"
+            }]
+        },
+        {
+            "seriesDescription": "BILATERAL",
+            "seriesNumber": "699",
+            "instanceList": [{
+                "imageId": "MGStudy/1.5191KB.DCM"
+            }]
+        },
+        {
+            "seriesDescription": "BILATERAL",
+            "seriesNumber": "699",
+            "instanceList": [{
+                "imageId": "MGStudy/1.5191KB.DCM"
+            }]
+        },
+        {
+            "seriesDescription": "BILATERAL",
+            "seriesNumber": "699",
+            "instanceList": [{
+                "imageId": "MGStudy/1.5191KB.DCM"
+            }]
+        },
+        {
+            "seriesDescription": "BILATERAL",
+            "seriesNumber": "699",
+            "instanceList": [{
+                "imageId": "MGStudy/test.dcm"
+            }]
+        }
+    ]
+}
