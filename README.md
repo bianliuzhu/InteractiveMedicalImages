@@ -28,10 +28,10 @@ Interactive Medical Images
   1. 安装 XAMPP 克隆这个项目放到 XAMPP 安装目录下的 htdcos 目录下 启动 Apache Web服务器
 
 * 了解这个程序的运行原理 
-  1. 在浏览器中输入 http://127.0.0.1/cornerstoneDemo/architecture.html 查看程序运行相关依赖 和 原理
+  1. 在浏览器中输入 http://127.0.0.1/InteractiveMedicalImages/architecture.html 查看程序运行相关依赖 和 原理
 
 * 下面开始运行这个程序
-  1. 在浏览器中输入 http://127.0.0.1/cornerstoneDemo/  [此时会看到一个黑色的界面]
+  1. 在浏览器中输入 http://127.0.0.1/InteractiveMedicalImages/  [此时会看到一个黑色的界面]
   2. 打控制台看是否有报错 ( 有的话 运行环境的问题 调整运行环境)
 
 * 将这个程序融入到 自己的项目中
