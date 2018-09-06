@@ -40,4 +40,21 @@ Interactive Medical Images
   3. 重点在 loadStudy.js 这个是负责加载数据的 搜索 dicomweb://10.0.0.5/testDICOM/ 将他修改成 你自己的文地址 比如: dicomweb://127.0.0.1/testDICOM/ 就ok了 注意这里有坑 dicomweb 不可以修改这个前缀可以自动识别 协议名 http ,https ...千万不能改
   4. 注意看 studies 文件夹 json 数据是与 loadstudy.js 中的 ImageId 像对应的 所以需要配置对应路径的文件夹以及文件 都准备好了 [点击下载](https://github.com/bianliuzhu/testDicom) 将这个文件加压后 修改文件名为 testDICOM 并把这个文件夹 copy 到 htdocs 目录下
   5. 现在项目可以跑起来了
-  6. 遇到问题联系我 帮你一起爬坑 [Email:bianluzhu@gmail.com] 看到后第一时间回复!
+  6. 如有错误请指正 [Email:bianliuzhu@gmail.com] 
+
+
+疑问:
+================
+问题描述:
+    2018年9月5日 网友[葉子紛飛](75797351@qq.com) 遇到两个问题 给我 发来邮件:
+解决方案:
+  1.部分标准影像无法展示
+    [葉子紛飛](75797351@qq.com)已经提供解决方案:
+    只需要修改原来项目的InteractiveMedicalImages\lib\dicomParser.js文件即可,从[DicomParsing](https://github.com/GleasonBian/DicomParsing)该项目内提取到该文件。
+
+  2.非标准Dicom影像无法显示
+    目前该问题 尚未 解决
+
+感谢:
+================
+  非常感谢 [葉子紛飛](75797351@qq.com)  的提醒 邮件地址已更正
