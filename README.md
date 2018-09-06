@@ -46,13 +46,18 @@ Interactive Medical Images
 疑问:
 ================
 问题描述:
+
     2018年9月5日 网友[葉子紛飛](75797351@qq.com) 遇到两个问题 给我 发来邮件:
+
 解决方案:
+
   1.部分标准影像无法展示
+
     [葉子紛飛](75797351@qq.com)已经提供解决方案:
     只需要修改原来项目的InteractiveMedicalImages\lib\dicomParser.js文件即可,从[DicomParsing](https://github.com/GleasonBian/DicomParsing)该项目内提取到该文件。
 
   2.非标准Dicom影像无法显示
+  
     目前该问题 尚未 解决
 
 感谢:
