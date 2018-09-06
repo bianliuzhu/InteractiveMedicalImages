@@ -53,11 +53,11 @@ Interactive Medical Images
     1.部分标准影像无法展示
       [葉子紛飛](75797351@qq.com)已经提供解决方案:
       只需要修改原来项目的InteractiveMedicalImages\lib\dicomParser.js文件即可,
-      从[DicomParsing](https://github.com/GleasonBian/DicomParsing)该项目内提取到该文件。
+      
+可以从[DicomParsing](https://github.com/GleasonBian/DicomParsing)项目内提取到dicomParser.js文件。
 
-  2.非标准Dicom影像无法显示
-
-    目前该问题 尚未 解决
+    2.非标准Dicom影像无法显示
+      目前该问题 尚未 解决
 
 感谢:
 ================
